@@ -1,0 +1,13 @@
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav mode="over" >Sidenav content
+        <nav>
+            <ul>
+              <li><a routerLink="login" routerLinkActive="active" (click)="sidenav.close()">First Component</a></li>
+              <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+            </ul>
+          </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
