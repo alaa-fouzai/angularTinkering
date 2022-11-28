@@ -1,1 +1,5 @@
 <p>index works!</p>
+<form [formGroup] = "inputIndex">
+<input type="text" formControlName="name">
+<button type="submit" (click)="changeName()">submit</button>
+</form>

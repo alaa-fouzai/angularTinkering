@@ -8,11 +8,16 @@ import { ToolbarService } from './toolbar.service';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-
+  public name:any;
   constructor(private sidenav :SidenavserviceService,private tools:ToolbarService) { }
   showtoolbar :any;
   ngOnInit(): void {
     this.showtoolbar=this.tools.getshowtoolbar();
+    this.tools.getMessage().subscribe(m => {
+      this.name = m;
+      console.log(m);
+    
+    });
   }
   Togglesidenav() {
     this.sidenav.toggle();
