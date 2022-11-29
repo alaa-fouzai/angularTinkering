@@ -2,4 +2,9 @@
 <form [formGroup] = "inputIndex">
 <input type="text" formControlName="name">
 <button type="submit" (click)="changeName()">submit</button>
+<div *ngFor="let item of id; index as i;">
+    <p>{{item.id}}</p>
+    <p>{{item.path}}</p>
+    <p>{{item.title}}</p>
+</div>
 </form>
